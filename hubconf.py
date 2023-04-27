@@ -3,25 +3,25 @@ import torch
 
 # Ultralytics yolov5n
 def yolov5n(pretrained=False, **kwargs):
-    model = torch.hub.load('ultralytics/yolov5', 'yolov5n', pretrained=pretrained)
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5n', pretrained=pretrained, **kwargs)
     return model
 
 # Ultralytics yolov5s
 def yolov5s(pretrained=False, **kwargs):
-    model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=pretrained)
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=pretrained, **kwargs)
     return model
 
 # Ultralytics yolov5m
 def yolov5m(pretrained=False, **kwargs):
-    model = torch.hub.load('ultralytics/yolov5', 'yolov5m', pretrained=pretrained)
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5m', pretrained=pretrained, **kwargs)
     return model
 
 # Ultralytics yolov5l
 def yolov5l(pretrained=False, **kwargs):
-    model = torch.hub.load('ultralytics/yolov5', 'yolov5l', pretrained=pretrained)
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5l', pretrained=pretrained, **kwargs)
     return model
 
 # Ultralytics yolov5x
 def yolov5x(pretrained=False, **kwargs):
-    model = torch.hub.load('ultralytics/yolov5', 'yolov5x', pretrained=pretrained)
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5x', pretrained=pretrained, **kwargs)
     return model
