@@ -1,6 +1,8 @@
 dependencies = ['torch']
 import torch
 
+####added yolov7
+
 # Ultralytics yolov5n
 def yolov5n(pretrained=False, **kwargs):
     model = torch.hub.load('ultralytics/yolov5', 'yolov5n', pretrained=pretrained, **kwargs)
