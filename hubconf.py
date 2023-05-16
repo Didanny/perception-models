@@ -39,8 +39,24 @@ def yolov5x(pretrained=False, **kwargs):
 #     return model
 
 
+# # WongKinYiu yolov7
+# model_path='/home/ljk/perception-model-pruning/exact_models/yolov7.pt'
+# def yolov7(pretrained=False, **kwargs):
+#     model = torch.hub.load("WongKinYiu/yolov7", "custom", model_path, pretrained=pretrained, **kwargs)
+#     return model
+
 # WongKinYiu yolov7
-model_path='/home/ljk/perception-model-pruning/exact_models/yolov7.pt'
 def yolov7(pretrained=False, **kwargs):
-    model = torch.hub.load("WongKinYiu/yolov7", "custom", model_path, pretrained=pretrained, **kwargs)
+model_path='/home/ljk/perception-model-pruning/exact_models/yolov7.pt'
+if not os.path.exists(model_path):
+    print
+    os.system(
+        f"wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/{os.path.basename(model_path)} -O {model_path}"
+    )
+
+# load model
+try:
+    model = torch.hub.load("WongKinYiu/yolov7", "custom", model_path)
+except:
+    raise Exception("Failed to load model from {}".format(model_path))
     return model
