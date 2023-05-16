@@ -42,3 +42,8 @@ def yolov7(pretrained=False, **kwargs):
     except:
         raise Exception("Failed to load model from {}".format(model_path))
     return model
+
+# # WongKinYiu yolov7
+# def yolov7(pretrained=False, **kwargs):
+#     model = torch.hub.load('WongKinYiu/yolov7', 'yolov7', pretrained=pretrained, **kwargs)
+#     return model
