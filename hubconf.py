@@ -34,6 +34,13 @@ def yolov5x(pretrained=False, **kwargs):
 
 
 # WongKinYiu yolov7
+#def yolov7(pretrained=False, **kwargs):
+ #   model = torch.hub.load('WongKinYiu/yolov7', 'yolov7', pretrained=pretrained, **kwargs)
+ #   return model
+
+
+# WongKinYiu yolov7
+model_path='/home/ljk/perception-model-pruning/exact_models/yolov7.pt'
 def yolov7(pretrained=False, **kwargs):
-    model = torch.hub.load('WongKinYiu/yolov7', 'yolov7', pretrained=pretrained, **kwargs)
+    model = torch.hub.load("WongKinYiu/yolov7", "custom", model_path, pretrained=pretrained, **kwargs)
     return model
