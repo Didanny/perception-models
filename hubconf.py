@@ -25,3 +25,9 @@ def yolov5l(pretrained=False, **kwargs):
 def yolov5x(pretrained=False, **kwargs):
     model = torch.hub.load('ultralytics/yolov5', 'yolov5x', pretrained=pretrained, **kwargs)
     return model
+
+# WongKinYiu yolov7
+model_path='/home/ljk/models/yolov7.pt'
+def yolov7(pretrained=True, **kwargs):
+    model = torch.hub.load("WongKinYiu/yolov7", "custom", model_path, pretrained=pretrained, **kwargs)
+    return model
