@@ -1,5 +1,6 @@
 dependencies = ['torch']
 import torch
+import os
 
 # Ultralytics yolov5n
 def yolov5n(pretrained=False, **kwargs):
