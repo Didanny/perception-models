@@ -35,7 +35,7 @@ def yolov5x(pretrained=False, **kwargs):
 
 # WongKinYiu yolov7
 def yolov7(pretrained=False, **kwargs):
-    model = torch.hub.load('WongKinYiu/yolov7', 'yolov7', pretrained=pretrained, **kwargs)
+    model = torch.hub.load('WongKinYiu/yolov7', 'yolov7', pretrained=pretrained, **kwargs,force_reload=True)
     return model
 
 
